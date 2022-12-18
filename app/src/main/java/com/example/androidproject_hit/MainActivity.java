@@ -32,14 +32,14 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
 
 
-        SpannableString ss = new SpannableString("Don't have an account? Register");
-        ClickableSpan clickableSpan = new ClickableSpan() {
-            @Override
-            public void onClick(View textView) {
-                //Toast.makeText(MainActivity.this, "RegisterSuccessful", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Registration.class);
-                startActivity(intent);
+        /// First clickable span
+        SpannableString ss1 = new SpannableString("Don't have an account? Register");
 
+        ClickableSpan clickableSpan1 = new ClickableSpan() {
+            @Override
+            public void onClick(View textView1) {
+                Intent intent1 = new Intent(MainActivity.this, Registration.class);
+                startActivity(intent1);
             }
 
             @Override
@@ -49,13 +49,36 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        ss.setSpan(clickableSpan, 23, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss1.setSpan(clickableSpan1, 23, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         TextView textView = (TextView) findViewById(R.id.Register_ClickableTextView);
-        textView.setText(ss);
+        textView.setText(ss1);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         textView.setHighlightColor(Color.TRANSPARENT);
 
-    }
 
+        /// Second clickable span
+        SpannableString ss2 = new SpannableString("Admin? Click here");
+
+        ClickableSpan clickableSpan2 = new ClickableSpan() {
+            @Override
+            public void onClick(View textView2) {
+/*                Intent intent2 = new Intent(MainActivity.this, Registration.class);
+                startActivity(intent2);*/
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false);
+            }
+        };
+
+        ss2.setSpan(clickableSpan2, 8, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        TextView textView2 = (TextView) findViewById(R.id.Admin_ClickableTextView);
+        textView2.setText(ss2);
+        textView2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        textView2.setHighlightColor(Color.TRANSPARENT);
+    }
 }
