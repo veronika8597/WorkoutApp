@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">AndroidProject_HIT</string>
+    <string name="trainig_level">Trainig Level</string>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="training_level">
+        <item>Basic</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Morning: 06:00 – 12:00</item>
+        <item>Noon: 12:00 – 18:00</item>
+        <item>Evening: 18:00 – 00:00</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

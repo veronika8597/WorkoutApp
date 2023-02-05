@@ -9,9 +9,9 @@ public class Customer {
     private String age;
     private String weight;
     private String height;
-    private boolean sex;
+    private String sex;
 
-    public Customer(String email, String f_name, String l_name, String phone, String age, String weight, String height, boolean sex) {
+    public Customer(String email, String f_name, String l_name, String phone, String age, String weight, String height, String sex) {
         this.email = email;
         this.f_name = f_name;
         this.l_name = l_name;
@@ -78,11 +78,11 @@ public class Customer {
         this.height = height;
     }
 
-    public boolean isSex() {
+    public String isSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 }

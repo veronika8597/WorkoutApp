@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:background="@drawable/gradient_list"
     android:id="@+id/mainLayout">
 
@@ -36,7 +36,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress2"
+                android:id="@+id/LoginInput_EmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -49,12 +49,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_margin="10dp"
+                android:clickable="true"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Password"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/LoginInput_Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -70,6 +71,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/login_button"
                 android:fontFamily="@font/comfortaa_light"
+                android:onClick="LoginClick"
                 android:text="Login"
                 android:textAlignment="center"
                 android:textColor="#ECE6E6"
